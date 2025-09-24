@@ -3,7 +3,7 @@ ARG BASE_IMAGE=latest
 FROM ghcr.io/ccpbiosim/jupyterhub-base:$BASE_IMAGE
 
 LABEL maintainer="James Gebbie-Rayet <james.gebbie@stfc.ac.uk>"
-LABEL org.opencontainers.image.source=https://github.com/jimboid/biosim-python-workshop
+LABEL org.opencontainers.image.source=https://github.com/ccpbiosim/python-workshop
 LABEL org.opencontainers.image.description="A container environment for the ccpbiosim workshop on Python."
 LABEL org.opencontainers.image.licenses=MIT
 
