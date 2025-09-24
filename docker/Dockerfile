@@ -12,7 +12,7 @@ USER $NB_USER
 WORKDIR $HOME
 
 # Install workshop deps
-RUN conda install matplotlib numpy pandas nglview ipywidgets -y
+RUN mamba install matplotlib numpy pandas nglview ipywidgets -y
 RUN pip install mdtraj
 
 # Get workshop files and move them to jovyan directory.
