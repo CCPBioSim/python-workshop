@@ -66,7 +66,7 @@ jobs:
         run: |
           docker run -t ghcr.io/${{ vars.ORG_REPO }}/${{ github.event.repository.name }}@${{ steps.build.outputs.digest }} bash -c " \
             pip install pytest nbmake; \
-            find . -name '*.ipynb' | pytest --nbmake --nbmake-timeout=3600 --ignore=answers; 
+            find . -name '*.ipynb' | pytest --nbmake --nbmake-timeout=3600 --ignore=answers; "
 
       - name: Export digest
         run: |
