@@ -14,4 +14,4 @@ https://github.com/CCPBioSim/python-and-data-workshop
 In our containers we are using the JupyterHub default port 8888, so you should
 forward this port when deploying locally::
 
-    docker run -p 8888:8888 ghcr.io/jimboid/biosim-python-workshop:latest
+    docker run -p 8888:8888 ghcr.io/ccpbiosim/python-workshop:latest
