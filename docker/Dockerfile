@@ -9,8 +9,17 @@ USER $NB_USER
 WORKDIR $HOME
 
 # Install workshop deps
-RUN mamba install matplotlib numpy pandas nglview ipywidgets -y
-RUN pip install mdtraj
+RUN conda install -y -c conda-forge \
+    matplotlib=3.11.1 \
+    numpy=2.5.3 \
+    pandas=3.0.5 \
+    nglview=4.0.1 \
+    ipywidgets=8.1.9
+RUN pip install --no-cache-dir \ 
+    mdtraj==1.11.1
+
+COPY docker/fix-nglview.sh /tmp/fix-nglview.sh
+RUN bash /tmp/fix-nglview.sh
 
 # Get workshop files and move them to jovyan directory.
 COPY --chown=1000:100 . .
