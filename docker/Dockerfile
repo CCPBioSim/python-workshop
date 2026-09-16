@@ -16,7 +16,7 @@ RUN conda install -y -c conda-forge \
     conda-forge::nglview=4.0.1 \
     conda-forge::ipywidgets=8.1.9
 RUN pip install --no-cache-dir \ 
-    mdtraj==1.11.1
+    mdtraj==1.11.1.post2
 
 COPY docker/fix-nglview.sh /tmp/fix-nglview.sh
 RUN bash /tmp/fix-nglview.sh
